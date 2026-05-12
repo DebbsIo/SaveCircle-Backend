@@ -1,0 +1,30 @@
+[package]
+name = "savecircle-backend"
+version = "0.1.0"
+edition = "2021"
+authors = ["DebbsIo <debbs@example.com>"]
+description = "Backend API for SaveCircle - Stellar-based savings circles"
+license = "MIT"
+repository = "https://github.com/DebbsIo/SaveCircle-Backend"
+homepage = "https://savecircle.org"
+
+[dependencies]
+actix-web = "4.4"
+actix-cors = "0.6"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+diesel = { version = "2.1", features = ["postgres", "r2d2", "chrono"] }
+dotenvy = "0.15"
+env_logger = "0.10"
+log = "0.4"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+bcrypt = "0.15"
+jsonwebtoken = "8.3"
+reqwest = { version = "0.11", features = ["json"] }
+stellar-sdk = "0.5"  # Assuming this is the crate name
+soroban-sdk = "0.9"   # For Soroban contracts
+
+[dev-dependencies]
+actix-web-test = "0.1"
